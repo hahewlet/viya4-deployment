@@ -87,6 +87,10 @@
     # Only run if license is missing and using legacy credentials
     - V4_CFG_LICENSE is none
     - not (USE_APIM_CREDS | default(false))
+  tags:
+    - install
+    - uninstall
+    - update
 
 - name: Assets - Get License (APIM credentials)
   command:
@@ -99,10 +103,6 @@
     # Only run if license is missing and using APIM credentials
     - V4_CFG_LICENSE is none
     - USE_APIM_CREDS | default(false)
-    
-  when:
-    # Only run if license is missing
-    - V4_CFG_LICENSE is none
   tags:
     - install
     - uninstall
@@ -120,6 +120,10 @@
     # Only run if certs are missing and using legacy credentials
     - V4_CFG_CERTS is none
     - not (USE_APIM_CREDS | default(false))
+  tags:
+    - install
+    - uninstall
+    - update
 
 - name: Assets - Get Certificates (APIM credentials)
   command:
