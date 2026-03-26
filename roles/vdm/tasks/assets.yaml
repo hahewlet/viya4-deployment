@@ -157,7 +157,7 @@
     - install
     - uninstall
     - update
-  register: res
+  register: res_legacy
 
 - name: Assets - Download (APIM credentials)
   command:
@@ -174,12 +174,12 @@
     - install
     - uninstall
     - update
-  register: res
+  register: res_apim
 
 # Set the order_output fact with the JSON output from the previous task
 - name: Assets - Set assets location
   set_fact:
-    order_output: "{{ res.stdout | from_json }}"
+    order_output: "{{ (res_legacy.stdout | default(res_apim.stdout)) | from_json }}"
   when:
     - V4_CFG_DEPLOYMENT_ASSETS is none
   tags:
