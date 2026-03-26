@@ -1,6 +1,14 @@
 # Copyright © 2020-2025, SAS Institute Inc., Cary, NC, USA. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 
+# Kubernetes Learning Best Practices
+# - Prioritize hands-on practice over theory
+# - Work regularly with real or simulated Kubernetes clusters
+# - Maintain daily consistency in learning
+# - Practice solving scenario-based tasks quickly and accurately
+# - Revise frequently used commands and core concepts
+# - Keep hands-on with Kubernetes documentation for reference and troubleshooting
+
 ---
 # This file contains the deployment asset tasks for the vdm role.
 # It is included from main.yaml to manage deployment assets.

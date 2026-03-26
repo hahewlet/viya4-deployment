@@ -155,8 +155,8 @@ When V4_CFG_MANAGE_STORAGE is set to `true`, the `sas` and `pg-storage` storage 
 
 | Name | Description | Type | Default | Required | Notes | Tasks |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: |
-| V4_CFG_SAS_API_KEY | SAS API Key| string | | true | [API credentials](https://developer.sas.com/guides/sas-viya-orders.html) can be obtained from the [SAS API Portal](https://apiportal.sas.com/get-started) | viya |
-| V4_CFG_SAS_API_SECRET | SAS API Secret | string | | true | [API credentials](https://developer.sas.com/guides/sas-viya-orders.html) can be obtained from the [SAS API Portal](https://apiportal.sas.com/get-started) | viya |
+| V4_CFG_SAS_API_KEY | SAS API Key| string | | true | [API credentials](https://developer.sas.com/guides/sas-viya-orders.html) can be obtained from the [SAS API Portal](https://apiportal.sas.com/get-started) (Refer Deprication not below) | viya |
+| V4_CFG_SAS_API_SECRET | SAS API Secret | string | | true | [API credentials](https://developer.sas.com/guides/sas-viya-orders.html) can be obtained from the [SAS API Portal](https://apiportal.sas.com/get-started)(Refer Deprication not below) | viya |
 | V4_CFG_APIM_CLIENT_ID | APIM Client ID | string | | false | [APIM credentials](https://developer.sas.com/rest-apis/mysas/docs/getting-started/authentication#obtain-client-credentials) can be obtained from the [SAS API Portal](https://apiportal.sas.com/get-started) | viya |
 | V4_CFG_APIM_CLIENT_SECRET | APIM Client Secret | string | | false | [APIM credentials](https://developer.sas.com/rest-apis/mysas/docs/getting-started/authentication#obtain-client-credentials) can be obtained from the [SAS API Portal](https://apiportal.sas.com/get-started) | viya |
 | USE_APIM_CREDS | Switch to use APIM credentials instead of legacy SAS API credentials | bool | false | false | Set to `true` to use APIM credentials. Supported until April 20, 2026, after which legacy SAS API credentials will no longer work. | viya |
