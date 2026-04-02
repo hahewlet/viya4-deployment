@@ -1,0 +1,28 @@
+# Copyright © 2024, SAS Institute Inc., Cary, NC, USA. All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+
+apiVersion: builtin
+kind: PatchTransformer
+metadata:
+  name: opendistro-zone-distribution
+patch: |-
+  - op: add
+    path: /spec/template/spec/topologySpreadConstraints
+    value:
+      - maxSkew: 1
+        topologyKey: topology.kubernetes.io/zone
+        whenUnsatisfiable: DoNotSchedule
+        labelSelector:
+          matchLabels:
+            app.kubernetes.io/name: sas-opendistro
+      - maxSkew: 1
+        topologyKey: kubernetes.io/hostname
+        whenUnsatisfiable: ScheduleAnyway
+        labelSelector:
+          matchLabels:
+            app.kubernetes.io/name: sas-opendistro
+target:
+  group: opendistro.sas.com
+  version: v1alpha1
+  kind: OpenDistroCluster
+  name: sas-opendistro
